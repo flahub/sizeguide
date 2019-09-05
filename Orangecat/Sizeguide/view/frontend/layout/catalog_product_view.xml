@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+    <referenceContainer name="product.info.main">
+        <block class="Orangecat\Sizeguide\Block\Sizeguide" name="sizeguide.link" template="Orangecat_Sizeguide::link.phtml">
+            <block class="Magento\Framework\View\Element\Template" name="popup" as="popup" template="Orangecat_Sizeguide::popup.phtml" after="-">
+                <block class="Magento\Cms\Block\Block" name="popup-content">
+                    <arguments>
+                        <argument name="block_id" xsi:type="string">sizeguide-block</argument>
+                    </arguments>
+                </block>
+            </block>
+        </block>
+    </referenceContainer>
+    </body>
+</page>

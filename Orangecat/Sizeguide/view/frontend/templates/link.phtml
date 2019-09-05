@@ -1,0 +1,12 @@
+<?php if($block->isEnabled()):?>
+<?php //show size_guide = yes
+            if(($currentProduct = $block->getCurrentProduct()) && ($currentProduct->getSizeGuide())):
+ ?>
+    <div class="sizeguide">
+        <a class="sizeguide-link action popup-open" data-mage-init='{"Orangecat_Sizeguide/js/popup":{"title":"<?php echo  __($block->getPopupTitle()); ?>"}}' href="#">
+            <span><?php echo  __($block->getLinkTxt()); ?></span>
+        </a>
+    </div>
+    <?php echo $this->getChildHtml('popup') ?>
+<?php       endif;
+    endif;?>
